@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<title>Road-map
+		</title>
+		<link rel="stylesheet" href="style.css" />
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+	</head>
+	<body onload="setTimeout('nextPic()',1000)">
+		<div class="header">
+				<h1>Frontend-Developer <br>Road-map</h1>
+				<h1 id="text"></h1>
+				<img id="image" src="start1.png">
+		</div>
+		<div class="container">
+			<div class="infinite">
+				<div class="shadow">
+				</div>
+			</div>
+		
+		<div class="box">
+			<div class="square"></div>
+		</div>
+		</div>
+
+         <script type = "text/javascript">
+            var image = document.getElementById("image");
+			var text=document.getElementById("text");
+            var currentPos = 0;
+            var images = ["start1.png","htmlico.png", "cssicon.png", "jsicon.png", "react.png","dj.png", "git.png"]
+			var headers=["start","1.Learn HTML","2.Learn CSS","3.Learn Javascript","4.Learn React","5.Learn Python Django"
+			,"6.Learn HOSTING"]
+            function volgendefoto() {
+                if (++currentPos >= images.length)
+                    currentPos = 0;
+
+                image.src = images[currentPos];
+				text.innerHTML=headers[currentPos];
+            }
+
+            setInterval(volgendefoto, 7000);
+        </script>
+	</body>
+</html>
